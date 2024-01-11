@@ -1,0 +1,58 @@
+body {
+  margin: 25px auto;
+  padding: 20px 15px 20px 15px;
+  width: 500px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font: bold;
+}
+
+button {
+  padding: 60px;
+  margin: 20px;
+  border: whitesmoke solid 6px;
+  border-radius: 10px;
+  background: lightblue;
+  font-size: 25px;
+}
+
+.fifteen {
+  padding: 60px;
+  margin: 15px;
+  text-align: center;
+}
+
+.twenty {
+  padding: 60px;
+  margin: 15px;
+  text-align: center;
+}
+
+.thirty {
+  padding: 60px;
+  margin: 15px;
+  text-align: center;
+}
+
+.forty {
+  padding: 60px;
+  margin: 15px;
+  text-align: center;
+}
+
+.zero {
+  padding: 60px 50px 60px 50px;
+  margin: 15px;
+  text-align: center;
+}
+
+.personal {
+  padding: 60px 40px 60px 40px;
+  margin: 15px;
+  text-align: center;
+}
+
+.btnStyle {
+  text-align: center;
+}

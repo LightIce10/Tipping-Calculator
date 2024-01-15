@@ -9,22 +9,23 @@
   </head>
   <body>
     <h1>Add a Tip</h1>
-    <p>Please select one of the options</p>
+    <p>Please select one of the options below</p>
 
     <p>
-        Current Bill: <input></input>
+        Current Bill: <input id="insertBill"></input>
     </p>
+    <p> Total people: <input></input></p>
 
-    <p class="btnStyle"><button class="fifteen">15%</button>
-      <button class="twenty">20%</button>
-      <button class="thirty">30%</button>
-      <button class="forty">40%</button>
-      <button class="zero">No Tip</button>
-      <button class="personal">Custom</button></p>
+    <p class="btnStyle"><button class="fifteen" id="fifteenP">15%</button>
+      <button class="twenty" id="twentyP">20%</button>
+      <button class="thirty" id="thirtyP">30%</button>
+      <button class="forty" id="fortyP">40%</button>
+      <button class="zero" id="noP">No Tip</button>
+      <button class="personal" id="myChoice">Custom</button></p>
     <hr>
 
     <p>
-        Bill total: ----
+        Bill total: <span id="totalBill">----</span> <button id="reset">Reset</button>
         </p>
   </body>
 </html>

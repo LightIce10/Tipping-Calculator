@@ -11,29 +11,33 @@ document.getElementById("reset").addEventListener("click", redo);
 // Output
 
 function fifteenTip() {
+  let numberOfPeople = +document.getElementById("perP").value;
   let bill = +document.getElementById("insertBill").value;
-  let total = 0.15 * bill + bill;
+  let total = 0.15 * bill + bill / numberOfPeople;
   document.getElementById("totalBill").innerHTML = total;
   console.log(total);
 }
 
 function twentyTip() {
+  let numberOfPeople = +document.getElementById("perP").value;
   let bill = +document.getElementById("insertBill").value;
-  let total = 0.2 * bill + bill;
+  let total = 0.2 * bill + bill / numberOfPeople;
   document.getElementById("totalBill").innerHTML = total;
   console.log(total);
 }
 
 function thirtyTip() {
+  let numberOfPeople = +document.getElementById("perP").value;
   let bill = +document.getElementById("insertBill").value;
-  let total = 0.3 * bill + bill;
+  let total = 0.3 * bill + bill / numberOfPeople;
   document.getElementById("totalBill").innerHTML = total;
   console.log(total);
 }
 
 function fortyTip() {
+  let numberOfPeople = +document.getElementById("perP").value;
   let bill = +document.getElementById("insertBill").value;
-  let total = 0.4 * bill + bill;
+  let total = 0.4 * bill + bill / numberOfPeople;
   document.getElementById("totalBill").innerHTML = total;
   console.log(total);
 }
@@ -46,13 +50,15 @@ function noTip() {
 }
 
 function personalTip() {
+  let numberOfPeople = +document.getElementById("perP").value;
   let bill = +document.getElementById("insertBill").value;
-  let total = 0.15 * bill + bill;
+  let total = 0.15 * bill + billnumberOfPeople;
   document.getElementById("totalBill").innerHTML = total;
   console.log(total);
 }
 
 function redo() {
-  document.getElementsById("totalBill").innerHTML = "";
-  document.getElementById("insertBill").innerHTML = "";
+  let tb = (document.getElementById("totalBill").innerHTML = "");
+  let ib = (document.getElementById("insertBill").value = "");
+  console.log(ib);
 }

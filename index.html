@@ -12,17 +12,19 @@
     <p>Please select one of the options below</p>
 
     <p>
-        Current Bill: <input id="insertBill"></input>
+        Current Bill: <input id="insertBill" type="number"></input>
     </p>
-    <p> Total people: <input id="ttlPeople"></input></p>
-
-    <p class="btnStyle"><button class="fifteen" id="fifteenP">15%</button>
-      <button class="twenty" id="twentyP">20%</button>
-      <button class="thirty" id="thirtyP">30%</button>
-      <button class="forty" id="fortyP">40%</button>
-      <button class="zero" id="noP">No Tip</button>
-      <button class="personal" id="myChoice">Custom</button></p>
+    <p> Total people: <input id="ttlPeople" type="number"></input></p>
+<table>
+    <tr class="btnStyle">
+      <tr><td><button class="fifteen" id="fifteenP">15%</button></td>
+      <td><button class="twenty" id="twentyP">20%</button></td>
+      <td><button class="thirty" id="thirtyP">30%</button></td></tr>
+      <td><button class="forty" id="fortyP">40%</button></td>
+      <td><button class="zero" id="noP">No Tip</button></td>
+      <td><div id="customBTN"><button class="personal" id="myChoice">Custom</button></div></td></tr>
     <hr>
+  </table>
 
     <p>
         Per person: <span id="perP">----</span></p>

@@ -72,3 +72,7 @@ button:hover {
   background: lightblue;
   font-size: 15px;
 }
+
+table {
+  margin-left: 100px;
+}

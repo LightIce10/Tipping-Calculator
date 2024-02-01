@@ -1,4 +1,3 @@
-// Input
 document.getElementById("fifteenP").addEventListener("click", fifteenTip);
 document.getElementById("twentyP").addEventListener("click", twentyTip);
 document.getElementById("thirtyP").addEventListener("click", thirtyTip);
@@ -7,14 +6,15 @@ document.getElementById("noP").addEventListener("click", noTip);
 document.getElementById("myChoice").addEventListener("click", personalTip);
 document.getElementById("reset").addEventListener("click", redo);
 
-// Output
 function fifteenTip() {
   let numberOfPeople = +document.getElementById("ttlPeople").value;
   let bill = +document.getElementById("insertBill").value;
   let total = 0.15 * bill + bill;
   let totalPerPerson = total / numberOfPeople;
-  document.getElementById("perP").innerHTML = totalPerPerson;
-  document.getElementById("totalBill").innerHTML = total;
+  total = total.toFixed(2);
+  totalPerPerson = totalPerPerson.toFixed(2);
+  document.getElementById("perP").innerHTML = `$${totalPerPerson}`;
+  document.getElementById("totalBill").innerHTML = `$${total}`;
 }
 
 function twentyTip() {
@@ -22,8 +22,10 @@ function twentyTip() {
   let bill = +document.getElementById("insertBill").value;
   let total = 0.2 * bill + bill;
   let totalPerPerson = total / numberOfPeople;
-  document.getElementById("perP").innerHTML = totalPerPerson;
-  document.getElementById("totalBill").innerHTML = total;
+  total = total.toFixed(2);
+  totalPerPerson = totalPerPerson.toFixed(2);
+  document.getElementById("perP").innerHTML = `$${totalPerPerson}`;
+  document.getElementById("totalBill").innerHTML = `$${total}`;
 }
 
 function thirtyTip() {
@@ -31,8 +33,10 @@ function thirtyTip() {
   let bill = +document.getElementById("insertBill").value;
   let total = 0.3 * bill + bill;
   let totalPerPerson = total / numberOfPeople;
-  document.getElementById("perP").innerHTML = totalPerPerson;
-  document.getElementById("totalBill").innerHTML = total;
+  total = total.toFixed(2);
+  totalPerPerson = totalPerPerson.toFixed(2);
+  document.getElementById("perP").innerHTML = `$${totalPerPerson}`;
+  document.getElementById("totalBill").innerHTML = `$${total}`;
 }
 
 function fortyTip() {
@@ -40,24 +44,42 @@ function fortyTip() {
   let bill = +document.getElementById("insertBill").value;
   let total = 0.4 * bill + bill;
   let totalPerPerson = total / numberOfPeople;
-  document.getElementById("perP").innerHTML = totalPerPerson;
-  document.getElementById("totalBill").innerHTML = total;
+  total = total.toFixed(2);
+  totalPerPerson = totalPerPerson.toFixed(2);
+  document.getElementById("perP").innerHTML = `$${totalPerPerson}`;
+  document.getElementById("totalBill").innerHTML = `$${total}`;
 }
 
 function noTip() {
   let numberOfPeople = +document.getElementById("ttlPeople").value;
   let bill = +document.getElementById("insertBill").value;
   let totalPerPerson = bill / numberOfPeople;
-  document.getElementById("perP").innerHTML = totalPerPerson;
-  document.getElementById("totalBill").innerHTML = bill;
+  bill = bill.toFixed(2);
+  totalPerPerson = totalPerPerson.toFixed(2);
+  document.getElementById("perP").innerHTML = `$${totalPerPerson}`;
+  document.getElementById("totalBill").innerHTML = `$${bill}`;
 }
 
 function personalTip() {
-  let numberOfPeople = +document.getElementById("perP").value;
+  /* let numberOfPeople = +document.getElementById("perP").value;
   let bill = +document.getElementById("insertBill").value;
-  let total = 0.15 * bill + billnumberOfPeople;
-  document.getElementById("totalBill").innerHTML = total;
-  console.log(total);
+  let totalPerPerson = bill / numberOfPeople;
+ let total = 0.15 * bill + billnumberOfPeople;
+   total = total.toFixed(2);
+  totalPerPerson = totalPerPerson.toFixed(2);
+   document.getElementById("totalBill").innerHTML = `$ ${total}`;
+   console.log(total); */
+
+  personal = document.getElementById("customBTN");
+  personal.innerHTML = `<button id="goBack">Go Back</button><p>
+ Current Bill: <input type="number"></input>
+</p>
+<p> Total people: <input type="number"></input></p>`;
+  document.getElementById("goBack").style.width = "30px";
+  document.getElementById("goBack").style.margin = "20px";
+  document.getElementById("goBack").style.padding = "20px";
+  document.getElementById("goBack").style.fontSize = "15px";
+  document.getElementById("goBack").style.textAlign = "center";
 }
 
 function redo() {

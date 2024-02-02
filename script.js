@@ -72,14 +72,36 @@ function personalTip() {
 
   personal = document.getElementById("customBTN");
   personal.innerHTML = `<button id="goBack">Go Back</button><p>
- Current Bill: <input type="number"></input>
+ Specific percentage: <input id="specifyPercent" type="number"></input>
 </p>
-<p> Total people: <input type="number"></input></p>`;
+<button id="ogPercent">Done</button><p>`;
+
+  // Style
   document.getElementById("goBack").style.width = "30px";
   document.getElementById("goBack").style.margin = "20px";
   document.getElementById("goBack").style.padding = "20px";
   document.getElementById("goBack").style.fontSize = "15px";
   document.getElementById("goBack").style.textAlign = "center";
+
+  document.getElementById("ogPercent").style.width = "25px";
+  document.getElementById("ogPercent").style.margin = "20px";
+  document.getElementById("ogPercent").style.padding = "15px";
+  document.getElementById("ogPercent").style.fontSize = "10px";
+  document.getElementById("ogPercent").style.textAlign = "center";
+}
+
+document.getElementById("ogPercent").addEventListener("click", personalPercent);
+
+function personalPercent() {
+  let percent = +document.getElementById("specifyPercent");
+  let bill = +document.getElementById("insertBill");
+  let numberOfPeople = +document.getElementById("ttlPeople");
+  let total = (percent / 100) * bill + bill;
+  totalPerPerson = total / numberOfPeople;
+  bill = bill.toFixed(2);
+  totalPerPerson = totalPerPerson.toFixed(2);
+  document.getElementById("perP").innerHTML = `$${totalPerPerson}`;
+  document.getElementById("totalBill").innerHTML = `$${bill}`;
 }
 
 function redo() {

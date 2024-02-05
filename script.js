@@ -62,23 +62,28 @@ function noTip() {
 
 function personalTip() {
   personal = document.getElementById("customBTN");
-  personal.innerHTML = `<div id="customBTNChange" ><button id="goBack" onclick="goCustomBTN()">Custom go Back</button><p id="sP">
+  personal.innerHTML = `<div id="customBTNChange" ><button id="goBack" onclick="goCustomBTN()">Back</button><p id="sP">
  Specific percentage: <input id="specifyPercent" type="number"></input>
 </p>
 <button id="ogPercent" onclick="personalPercent()">Done</button></div>`;
 
   // Style
-  document.getElementById("goBack").style.width = "30px";
-  document.getElementById("goBack").style.margin = "20px";
+  document.getElementById("goBack").style.width = "100px";
+  document.getElementById("goBack").style.margin = "5px";
   document.getElementById("goBack").style.padding = "20px";
-  document.getElementById("goBack").style.fontSize = "15px";
+  document.getElementById("goBack").style.fontSize = "15px ";
   document.getElementById("goBack").style.textAlign = "center";
 
-  document.getElementById("ogPercent").style.width = "25px";
-  document.getElementById("ogPercent").style.margin = "20px";
+  document.getElementById("ogPercent").style.width = "100px";
+  document.getElementById("ogPercent").style.margin = "5px";
   document.getElementById("ogPercent").style.padding = "15px";
-  document.getElementById("ogPercent").style.fontSize = "10px";
+  document.getElementById("ogPercent").style.fontSize = "15px";
   document.getElementById("ogPercent").style.textAlign = "center";
+
+  document.getElementById("customBTNChange").style.textAlign = "center";
+  document.getElementById("customBTNChange").style.width = "250px";
+  document.getElementById("customBTNChange").style.margin = "5px";
+  document.getElementById("customBTNChange").style.padding = "20px";
 }
 
 function IHaveASay() {
@@ -105,22 +110,11 @@ function personalPercent() {
 }
 
 function goCustomBTN() {
-  document.getElementById("customBTNChange").style.padding =
-    "60px 40px 60px 40px";
-  document.getElementById("customBTNChange").style.margin = "15px";
-  document.getElementById("customBTNChange").style.textAlign = "center";
-  document.getElementById("customBTNChange").innerHTML = "Custom";
-  document.getElementById("customBTNChange").style.fontSize = "25px";
-  document.getElementById("customBTNChange").style.border = "6px solid white";
-  document.getElementById("customBTNChange").style.borderRadius = "10px";
-  document.getElementById("customBTNChange").style.background = "lightblue";
-  document.getElementById("customBTNChange").style.background = "palegreen";
-  document.getElementById("customBTNChange").style.color = "lightcoral";
-  document.getElementById("specifyPercent").style.display = "none";
-  document.getElementById("ogPercent").style.display = "none";
-  document.getElementById("sP").style.display = "none";
-  document.getElementById("customBTNChange").style.transition =
-    "color 1s, background 1s";
+  document.getElementById("second-row").innerHTML = `
+    <td><button class="forty" id="fortyP">40%</button></td>
+    <td><button class="zero" id="noP">No Tip</button></td>
+    <td><div id="customBTN"><button onclick="personalTip()" class="personal" id="myChoice">Custom</button></div></td>
+  `;
 }
 
 function redo() {
@@ -129,20 +123,9 @@ function redo() {
   let pp = (document.getElementById("perP").innerHTML = "----");
   let tp = (document.getElementById("ttlPeople").value = "");
 
-  document.getElementById("customBTNChange").style.padding =
-    "60px 40px 60px 40px";
-  document.getElementById("customBTNChange").style.margin = "15px";
-  document.getElementById("customBTNChange").style.textAlign = "center";
-  document.getElementById("customBTNChange").innerHTML = "Custom";
-  document.getElementById("customBTNChange").style.fontSize = "25px";
-  document.getElementById("customBTNChange").style.border = "6px solid white";
-  document.getElementById("customBTNChange").style.borderRadius = "10px";
-  document.getElementById("customBTNChange").style.background = "lightblue";
-  document.getElementById("customBTNChange").style.background = "palegreen";
-  document.getElementById("customBTNChange").style.color = "lightcoral";
-  document.getElementById("specifyPercent").style.display = "none";
-  document.getElementById("ogPercent").style.display = "none";
-  document.getElementById("sP").style.display = "none";
-  document.getElementById("customBTNChange").style.transition =
-    "color 1s, background 1s";
+  document.getElementById("second-row").innerHTML = `
+      <td><button class="forty" id="fortyP">40%</button></td>
+      <td><button class="zero" id="noP">No Tip</button></td>
+      <td><div id="customBTN"><button onclick="personalTip()" class="personal" id="myChoice">Custom</button></div></td>
+    `;
 }

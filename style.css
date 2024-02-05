@@ -72,6 +72,26 @@ button:hover {
   font-size: 15px;
 }
 
+#goBack {
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 80px;
+  border: whitesmoke solid 4px;
+  border-radius: 6px;
+  background: lightblue;
+  font-size: 15px;
+}
+
+#mySay {
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 80px;
+  border: whitesmoke solid 4px;
+  border-radius: 6px;
+  background: lightblue;
+  font-size: 15px;
+}
+
 table {
   margin-left: 100px;
 }

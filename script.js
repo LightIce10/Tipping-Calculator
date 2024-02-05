@@ -61,20 +61,11 @@ function noTip() {
 }
 
 function personalTip() {
-  /* let numberOfPeople = +document.getElementById("perP").value;
-  let bill = +document.getElementById("insertBill").value;
-  let totalPerPerson = bill / numberOfPeople;
- let total = 0.15 * bill + billnumberOfPeople;
-   total = total.toFixed(2);
-  totalPerPerson = totalPerPerson.toFixed(2);
-   document.getElementById("totalBill").innerHTML = `$ ${total}`;
-   console.log(total); */
-
   personal = document.getElementById("customBTN");
-  personal.innerHTML = `<button id="goBack">Go Back</button><p>
+  personal.innerHTML = `<div id="customBTNChange" ><button id="goBack" onclick="goCustomBTN()">Custom go Back</button><p id="sP">
  Specific percentage: <input id="specifyPercent" type="number"></input>
 </p>
-<button id="ogPercent">Done</button><p>`;
+<button id="ogPercent" onclick="personalPercent()">Done</button></div>`;
 
   // Style
   document.getElementById("goBack").style.width = "30px";
@@ -90,18 +81,46 @@ function personalTip() {
   document.getElementById("ogPercent").style.textAlign = "center";
 }
 
-document.getElementById("ogPercent").addEventListener("click", personalPercent);
+function IHaveASay() {
+  custom = personalTip();
+  console.log("custom");
+}
 
 function personalPercent() {
-  let percent = +document.getElementById("specifyPercent");
-  let bill = +document.getElementById("insertBill");
-  let numberOfPeople = +document.getElementById("ttlPeople");
+  let percent = +document.getElementById("specifyPercent").value;
+  let bill = +document.getElementById("insertBill").value;
+  let numberOfPeople = +document.getElementById("ttlPeople").value;
+
   let total = (percent / 100) * bill + bill;
   totalPerPerson = total / numberOfPeople;
-  bill = bill.toFixed(2);
+
+  total.toFixed(2);
   totalPerPerson = totalPerPerson.toFixed(2);
+
   document.getElementById("perP").innerHTML = `$${totalPerPerson}`;
-  document.getElementById("totalBill").innerHTML = `$${bill}`;
+  document.getElementById("totalBill").innerHTML = `$${total}`;
+
+  console.log(total);
+  console.log(totalPerPerson);
+}
+
+function goCustomBTN() {
+  document.getElementById("customBTNChange").style.padding =
+    "60px 40px 60px 40px";
+  document.getElementById("customBTNChange").style.margin = "15px";
+  document.getElementById("customBTNChange").style.textAlign = "center";
+  document.getElementById("customBTNChange").innerHTML = "Custom";
+  document.getElementById("customBTNChange").style.fontSize = "25px";
+  document.getElementById("customBTNChange").style.border = "6px solid white";
+  document.getElementById("customBTNChange").style.borderRadius = "10px";
+  document.getElementById("customBTNChange").style.background = "lightblue";
+  document.getElementById("customBTNChange").style.background = "palegreen";
+  document.getElementById("customBTNChange").style.color = "lightcoral";
+  document.getElementById("specifyPercent").style.display = "none";
+  document.getElementById("ogPercent").style.display = "none";
+  document.getElementById("sP").style.display = "none";
+  document.getElementById("customBTNChange").style.transition =
+    "color 1s, background 1s";
 }
 
 function redo() {
@@ -109,4 +128,21 @@ function redo() {
   let ib = (document.getElementById("insertBill").value = "");
   let pp = (document.getElementById("perP").innerHTML = "----");
   let tp = (document.getElementById("ttlPeople").value = "");
+
+  document.getElementById("customBTNChange").style.padding =
+    "60px 40px 60px 40px";
+  document.getElementById("customBTNChange").style.margin = "15px";
+  document.getElementById("customBTNChange").style.textAlign = "center";
+  document.getElementById("customBTNChange").innerHTML = "Custom";
+  document.getElementById("customBTNChange").style.fontSize = "25px";
+  document.getElementById("customBTNChange").style.border = "6px solid white";
+  document.getElementById("customBTNChange").style.borderRadius = "10px";
+  document.getElementById("customBTNChange").style.background = "lightblue";
+  document.getElementById("customBTNChange").style.background = "palegreen";
+  document.getElementById("customBTNChange").style.color = "lightcoral";
+  document.getElementById("specifyPercent").style.display = "none";
+  document.getElementById("ogPercent").style.display = "none";
+  document.getElementById("sP").style.display = "none";
+  document.getElementById("customBTNChange").style.transition =
+    "color 1s, background 1s";
 }

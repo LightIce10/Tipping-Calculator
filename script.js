@@ -48,6 +48,11 @@ function fortyTip() {
   totalPerPerson = totalPerPerson.toFixed(2);
   document.getElementById("perP").innerHTML = `$${totalPerPerson}`;
   document.getElementById("totalBill").innerHTML = `$${total}`;
+  console.log(total);
+  console.log(bill);
+   console.log(ttlPeople);
+   console.log(insertBill);
+   console.log(totalPerPerson);
 }
 
 function noTip() {
